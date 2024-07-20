@@ -1,11 +1,9 @@
-"use client";
+import { GlobalStateContext } from "./context";
 
-import {createTheme, ThemeProvider} from "@mui/material"
-
-export const Provider = ({children}) => {
-return (
-    <ThemeProvider theme={createTheme()}>
-        {children}
-    </ThemeProvider>
-)
+export const GlobalStateProvider = ({children}) => {
+    return (
+        <GlobalStateContext.Provider value={{counter: 0}}>
+            {children}
+        </GlobalStateContext.Provider>
+    )
 }

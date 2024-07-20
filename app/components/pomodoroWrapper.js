@@ -1,4 +1,11 @@
-export function PomodoroWrapper() {
-  return (
-    <div>pomodoroWrapper</div>
-    )};
+"use client"
+
+import { useGlobalState } from "@/store/context";
+
+export default function PomodoroWrapper () {
+    console.log(useGlobalState());
+
+    return (
+        <>PomodoroWrapper</>
+    )
+}

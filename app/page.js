@@ -1,13 +1,12 @@
-"use client";
+"use client"
 
-
+import PomodoroWrapper from "./components/pomodoroWrapper";
 import styles from "./page.module.css";
-import {PomodoroWrapper} from "../components/pomodoroWrapper.js";
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <PomodoroWrapper/>
+      <PomodoroWrapper />
     </main>
   );
 }
