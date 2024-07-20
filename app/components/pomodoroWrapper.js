@@ -3,9 +3,12 @@
 import { useGlobalState } from "@/store/context";
 
 export default function PomodoroWrapper () {
-    console.log(useGlobalState());
-
+const { state, dispatch } = useGlobalState();
+console.log(state);
     return (
-        <>PomodoroWrapper</>
+        <>
+        PomodoroWrapper
+        <input onChange={(e) => dispatch({type: "changeCounter", payload: e.target.value})} ></input>
+        </>
     )
 }
