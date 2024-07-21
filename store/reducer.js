@@ -3,10 +3,14 @@ export const globalStateReducer = (state, action) => {
     
     
     switch (type) {
-        case "changeCounter":
+        case "changeTime":
+            const { key, value } = payload;
             return {
                 ...state,
-                counter: payload
+                time: {
+                    ...state.time,
+                    [key]: value
+                }
             }
         default:
             return {
